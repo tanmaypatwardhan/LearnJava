@@ -15,7 +15,7 @@ public class ride {
       numValue = numValue - 64;
       score = score*numValue;
       System.out.println(character_array[i]+" "+numValue);
-      System.out.println("Score is: "+score);
     }
+    System.out.println("Score is: "+score);
   }
 }
