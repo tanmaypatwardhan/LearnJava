@@ -10,7 +10,7 @@ public class filereader {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			String firstname  = st.nextToken("/");
 			String lastname = st.nextToken("/");
-			pw.println("Lastname: " + lastname + "Firstname: " + firstname);
+			pw.println("Lastname: " + lastname + " Firstname: " + firstname);
 		}
 
 		pw.close();
