@@ -21,7 +21,7 @@ public class ride {
       }
 
       score_array[i] = score;
-      System.out.println(score_array[i] +" "+ score_array[i] % 47);
+    //  System.out.println(score_array[i] +" "+ score_array[i] % 47);
   }
 
   if (score_array[0] % 47 == score_array[1] % 47) {
