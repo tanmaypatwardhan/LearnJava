@@ -15,10 +15,15 @@ public class friday {
     int starting_year = 1990;
 
     int num_years = Integer.parseInt(br.readLine());
-    System.out.println(num_years);
+    //System.out.println(num_years);
 
-
-
+    int days_diff = 425;
+    int remainder = days_diff % 7;
+   for(int i  = 0; i < days_of_the_week.length ; i++){
+     if(days_of_the_week[i].equals("Monday")){
+       System.out.println(days_of_the_week[i + remainder]);
+     }
+   }
 
 
 
