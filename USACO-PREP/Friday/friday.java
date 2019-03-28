@@ -48,17 +48,8 @@ public class friday {
     }
   }
 
-<<<<<<< HEAD
     pw.println(freq_of_thirteenths[6] + " " + freq_of_thirteenths[0] + " " + freq_of_thirteenths[1] + " " + freq_of_thirteenths[2] + " " + freq_of_thirteenths[3] + " " + freq_of_thirteenths[4] + " " + freq_of_thirteenths[5]);
     br.close();
     pw.close();
-
-
-
-
-=======
-    br.close();
-    pw.close();
->>>>>>> 20687b5c146e1894a09b37054cb543358174d329
   }
 }
