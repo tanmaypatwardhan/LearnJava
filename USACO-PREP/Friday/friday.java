@@ -25,10 +25,6 @@ public class friday {
      }
    }
 
-
-
-
-
     br.close();
     pw.close();
   }
