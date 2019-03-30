@@ -12,26 +12,26 @@ public class beads {
     PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("beads.out")));
 
     int num_beads = Integer.parseInt(br.readLine());
-    //System.out.println(num_beads);
-    int[] streak_array = {};
-    char[] beads_array = new char[num_beads];
-    //System.out.println(beads_array.length);
+    String beads_string = br.readLine();
+    char[] beads_array = beads_string.toCharArray();
 
-    for(int i = 0; i < beads_array.length; i++){
-      int streak = 1;
-      if( i < beads_array.length){
-        if(beads_array[i] == beads_array[i + 1]){
+    Vector<Integer> streak_array = new Vector<Integer>();
+    int streak = 1;
+    int streak_index=0;
+    streak_array.add(0);
+    for(int i = 1; i < num_beads; i++){
+        if(beads_array[i-1] == beads_array[i]) {   // Increment streak at the same index//
           streak++;
+          streak_array.set(streak_index, streak);
+        } else if(i==num_beads-1){                  // Take care if the last element changes in the streak//
+          streak_index++;
+          streak_array.add(1);
         } else {
-          streak_array[i] = streak;
-          streak = 0;
+          streak_index++;                          // Increment index when streak changes and and a zero to at the new index position//
+          streak_array.add(0);
+          streak=1;
         }
-      }
-    }
-
-    for(int i = 0; i < streak_array.length; i++){
-      System.out.println(streak_array[i]);
-    }
-
+        }
+     System.out.println(streak_array);
   }
 }
