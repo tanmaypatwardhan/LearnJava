@@ -20,19 +20,16 @@ public class beads {
     int streak_index=0;
     streak_array.add(1);
     for(int i = 1; i < num_beads; i++){
-        if(beads_array[i-1] == beads_array[i]) {   // Increment streak at the same index//
+        if(beads_array[i-1] == beads_array[i] || beads_array[i-1] == 'w'|| beads_array[i] == 'w') {   // Increment streak at the same index//
           streak++;
           streak_array.set(streak_index, streak);
         } else if(i==num_beads-1){                  // Take care if the last element changes in the streak//
           streak_index++;
           streak_array.add(1);
         } else {
-          streak_index++;                          // Increment index when streak changes and and a zero to at the new index position//
+          streak_index++;                          // Increment index when streak changes and a zero to at the new index position//
           streak_array.add(1);
           streak=1;
-        }
-        if(beads_array[i].equals("w")){
-          beads_array[i] = beads_array[i-1];
         }
         }
      System.out.println(streak_array);
