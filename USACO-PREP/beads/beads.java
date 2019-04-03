@@ -31,6 +31,9 @@ public class beads {
           streak_array.add(1);
           streak=1;
         }
+        if(beads_array[i].equals("w")){
+          beads_array[i] = beads_array[i-1];
+        }
         }
      System.out.println(streak_array);
   }
