@@ -10,12 +10,13 @@ public class beads {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new FileReader("beads.in"));
     PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("beads.out")));
-
+    int highest_strk = 1;
     int num_beads = Integer.parseInt(br.readLine());
     String beads_string = br.readLine();
     char[] beads_array = beads_string.toCharArray();
 
     Vector<Integer> streak_array = new Vector<Integer>();
+
     int streak = 1;
     int streak_index=0;
     streak_array.add(1);
@@ -33,5 +34,27 @@ public class beads {
         }
         }
      System.out.println(streak_array);
+
+     for(int i = 1; i < streak_array.size() ; i++){
+       if(streak_array.size() == 1){
+         highest_strk = streak_array.get(0);
+
+       } else {
+         int sum = streak_array.get(i - 1) + streak_array.get(i);
+         if(sum > highest_strk){
+           highest_strk = sum;
+       }
+
+
+        // System.out.println(i);
+
+       }
+
+
+
+     }
+     System.out.println(highest_strk);
+
+
   }
 }
