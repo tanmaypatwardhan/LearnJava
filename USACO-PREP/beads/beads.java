@@ -27,15 +27,19 @@ public class beads {
           streak++;
           streak_array.set(streak_index, streak);
         } else if(i==num_beads-1){                  // Take care if the last element changes in the streak//
-          streak_index++;
-          streak_array.add(1);
-          if(beads_array[i] == 'w' )
+          if(beads_array[i] == 'w' && beads_array[i - 1] == 'w'){
+            w_strk++;
+            white_array.add(w_strk);
+          } else {
+            streak_index++;
+            streak_array.add(1);
+          }
         } else {
           streak_index++;                          // Increment index when streak changes and a zero to at the new index position//
           streak_array.add(1);
           streak=1;
         }
-        if(beads_array[i - 1] == 'w' ){
+        if(beads_array[i - 1] == 'w' && beads_array[i] == 'w' ){
           w_strk++;
           white_array.add(w_strk);
         }
@@ -45,6 +49,7 @@ public class beads {
   }
 
      System.out.println(streak_array);
+     System.out.println(w_strk);
 
      for(int i = 1; i < streak_array.size() ; i++){
        if(streak_array.size() == 1){
