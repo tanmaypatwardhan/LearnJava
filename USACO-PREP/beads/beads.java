@@ -20,8 +20,8 @@ public class beads {
     int streak_index=0;
     int highest_strk = 1;
     streak_array.add(1);
-    for(int i = 1; i < num_beads-1; i++){
-        if(beads_array[i-1] == beads_array[i] || beads_array[i-1] == 'w'|| beads_array[i] == 'w' || beads_array[i+1] == beads_array[i]|| beads_array[i+1] == 'w') {   // Increment streak at the same index//
+    for(int i = 1; i < num_beads; i++){
+        if(beads_array[i-1] == beads_array[i] || beads_array[i-1] == 'w'|| beads_array[i] == 'w') {   // Increment streak at the same index//
           streak++;
           streak_array.set(streak_index, streak);
         } else if(i==num_beads-1){                  // Take care if the last element changes in the streak//
