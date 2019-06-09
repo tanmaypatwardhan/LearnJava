@@ -21,31 +21,37 @@ public class beads {
     int highest_strk = 1;
     streak_array.add(1);
     for(int i = 1; i < num_beads; i++){
-        if(beads_array[i-1] == beads_array[i] || beads_array[i-1] == 'w'|| beads_array[i] == 'w') {   // Increment streak at the same index//
-          streak++;
+        if(beads_array[i-1] == beads_array[i] || beads_array[i-1] == 'w'|| beads_array[i] == 'w') {
+          streak++;   
+          // Increment streak at the same index//
           streak_array.set(streak_index, streak);
-        } else if(i==num_beads-1){                  // Take care if the last element changes in the streak//
+        if(i==num_beads-1){                  // Take care if the last element changes in the streak//
           streak_index++;
           streak_array.add(1);
+        }
         } else {
-          streak_index++;                          // Increment index when streak changes and a zero to at the new index position//
-          streak_array.add(1);
-          streak=1;
+          if(beads_array[i - 1] != beads_array[i]){
+            streak_index++;                          // Increment index when streak changes and a zero to at the new index position//
+            streak_array.add(1);
+            streak=1;
+          }
         }
         }
         System.out.println(streak_array);
 
 
      for(int i = 1; i < streak_array.size() ; i++){
-       if(streak_array.size() == 1){
-         highest_strk = streak_array.get(0);
-       } else {
+       if(streak_array.size() <= 1){
+         highest_strk = streak_array;
+       } else if(streak_array.size() > 1){
          int sum = streak_array.get(i - 1) + streak_array.get(i);
          if(sum > highest_strk){
-           highest_strk = sum;
+          highest_strk = sum;
        }
+      }
      }
+     System.out.println(highest_strk);
+
    }
-   System.out.println(highest_strk);
+
  }
-}
