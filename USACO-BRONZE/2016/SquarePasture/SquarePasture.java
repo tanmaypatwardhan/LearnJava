@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class squarePasture {
+public class SquarePasture {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new FileReader("10.in"));
     PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("sPasture.out")));
