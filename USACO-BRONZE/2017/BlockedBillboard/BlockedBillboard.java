@@ -25,6 +25,10 @@ public class BlockedBillboard {
 
   if((x5 >= x2 && x6 <= x3) || (x5 >= x4) || (x6 <= x1) || (y5 >=Math.max(y2 , y4)) || (y6 <= Math.min(y1 , y3))){
     pw.println(((x2 - x1) * (y2 - y1)) + ((x4 - x3) * (y4 - y3)));
+  } else {
+     if(x5 > x1 && x5 < x2 && x6 > x3 && x6 < x4 && y5 > y1 && y5 < y2 && y6 > y4){
+       pw.println(((x2 -x1) * (y2 - y1)) - (x2 - x5) * (y2 - y5) )
+     }
   }
 
   pw.close();
