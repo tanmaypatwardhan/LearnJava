@@ -8,23 +8,30 @@ public class BlockGame {
   StringTokenizer st = new StringTokenizer(br.readLine());
   int n = Integer.parseInt(st.nextToken());
   String[] words = new String[n * 2];
+  String[] words2 = new String[n * 2];
   int[] alphabets = new int[26];
   int j = 0;
   String result = "";
+  String word1 = "";
+  String word2 = "";
 
-  for(int i = 0; i < n ; i++){
+  for(int i = 0; i <= n ; i++){
     words[i] = br.readLine();
-
-
-
-  }
-  for(int g = 0; g < words.length ; g++){
-    String word1 = words[g].substring(0 , words[g].indexOf(" "));
-    String word2 = words[g].substring(words[g].indexOf(" ")  + 1);
-    pw.println(word1);
-    pw.println(word2);
+    word1 = words[i].substring(0 , words[i].indexOf(" "));
+    word2 = words[i].substring(words[i].indexOf(" ") + 1);
 
   }
+
+  for(int x = 0; x < words2.length; x++){
+    pw.println(words2[x]);
+  }
+
+
+
+
+
+
+
 
   while(j<words.length - 1){
     result += words[j];

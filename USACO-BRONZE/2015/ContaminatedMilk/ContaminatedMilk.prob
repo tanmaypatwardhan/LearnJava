@@ -1,7 +1,8 @@
 Farmer John, known far and wide for the quality of the milk produced on his farm, is hosting a milk-tasting party for N of his best friends (1≤N≤50).
 Unfortunately, of the M types of milk featured at the party (1≤M≤50), exactly one of them has gone bad, but Farmer John does not know which one!
 Anyone who drinks the bad milk will later become sick, either during the remainder of the party or afterward.
-You are given a transcript of the party -- who drinks what when, and also who gets sick when. Based on this information, you can deduce which of the milks could possibly be the bad one.
+You are given a transcript of the party -- who drinks what when, and also who gets sick when. Based on this information,
+you can deduce which of the milks could possibly be the bad one.
 Using this knowledge, help Farmer John determine the minimum number of doses of medicine he will need to obtain in order to guarantee that he can cure all of the individuals who become sick, either during or after the party.
 
 INPUT FORMAT (file badmilk.in):
