@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class TheBovineShuffle {
+/* public class TheBovineShuffle {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new FileReader("2.in"));
     PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("bShuffle.out")));
@@ -30,4 +30,49 @@ public class TheBovineShuffle {
     pw.close();
     br.close();
   }
+}
+*/
+import java.util.*;
+import java.io.*;
+
+public class TheBovineShuffle {
+
+	public static void main(String[] args) throws Exception {
+
+		// Read the grid.
+		Scanner stdin = new Scanner(new File("1.in"));
+    PrintWriter out = new PrintWriter(new FileWriter("TheBovineShuffle.out"));
+
+		// Read in perm backwards.
+		int n = stdin.nextInt();
+		int[] perm = new int[n];
+		for (int i=0; i<n; i++) {
+			int pos = stdin.nextInt();
+			perm[i] = pos-1;
+      out.println(perm[i]);
+
+		}
+   out.println("===============");
+   
+		// How we want to shuffle the input.
+		int[] finalperm = new int[n];
+		for (int i=0; i<n; i++){
+      finalperm[i] = perm[perm[perm[i]]];
+      out.println(finalperm[i]);
+
+    }
+   out.println("===============");
+
+		// Get ending cows.
+		int[] ID = new int[n];
+		for (int i=0; i<n; i++)
+			ID[i] = stdin.nextInt();
+
+		// Ta da!
+		//PrintWriter out = new PrintWriter(new FileWriter("TheBovineShuffle.out"));
+		for (int i=0; i<n; i++)
+			out.println(ID[finalperm[i]]);
+		out.close();
+		stdin.close();
+	}
 }

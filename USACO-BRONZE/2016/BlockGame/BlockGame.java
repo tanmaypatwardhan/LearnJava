@@ -2,57 +2,49 @@ import java.io.*;
 import java.util.*;
 public class BlockGame {
   public static void main(String[] args) throws IOException {
-  BufferedReader br = new BufferedReader(new FileReader("1.in"));
+  BufferedReader br = new BufferedReader(new FileReader("10.in"));
   PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("bGame.out")));
 
   StringTokenizer st = new StringTokenizer(br.readLine());
   int n = Integer.parseInt(st.nextToken());
-  String[] words = new String[n * 2];
-  String[] words2 = new String[n * 2];
+  String[] words = new String[n];
   int[] alphabets = new int[26];
-  int j = 0;
-  String result = "";
-  String word1 = "";
-  String word2 = "";
+  int[] pA1 = new int[26];
+  int[] pA2 = new int[26];
 
-  for(int i = 0; i <= n ; i++){
+  for(int i = 0; i < n ; i++){
     words[i] = br.readLine();
-    word1 = words[i].substring(0 , words[i].indexOf(" "));
-    word2 = words[i].substring(words[i].indexOf(" ") + 1);
+    //pw.println(words[i]);
 
   }
 
-  for(int x = 0; x < words2.length; x++){
-    pw.println(words2[x]);
-  }
+    int i = 0;
+    while(i < words.length){
+      for(int j = 0; j < words[i].length() ; j++){
+        if(j < words[i].indexOf(" ")){
+          pA1[((int)words[i].charAt(j) - 97)]++;
+        }
+        if(j > words[i].indexOf(" ")){
+          pA2[((int)words[i].charAt(j) - 97)]++;
+        }
 
 
+      }
+      for(int z = 0; z < alphabets.length; z++){
+        alphabets[z] += Math.max(pA1[z] , pA2[z]);
+        pA1[z] = 0;
+        pA2[z] = 0;
+      }
 
-
-
-
-
-
-  while(j<words.length - 1){
-    result += words[j];
-    j++;
-  }
-  int z = 0;
-  while(z < result.length()){
-    if(result.substring(z , z + 4).equals("null")){
-      break;
+      i++;
     }
-    if(result.charAt(z) != ' '){
-      alphabets[((int)result.charAt(z) - 97)]++;
-    } else {
-      z++;
-    }
-    z++;
 
-  }
 
-  for(int t  = 0 ; t < alphabets.length; t++){
-    //pw.println(alphabets[t]);
+
+
+  for(int x = 0; x < alphabets.length; x++){
+    pw.println(alphabets[x]);
+
   }
 
 
