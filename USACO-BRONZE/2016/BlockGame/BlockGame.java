@@ -14,10 +14,7 @@ public class BlockGame {
 
   for(int i = 0; i < n ; i++){
     words[i] = br.readLine();
-    //pw.println(words[i]);
-
   }
-
     int i = 0;
     while(i < words.length){
       for(int j = 0; j < words[i].length() ; j++){
@@ -27,8 +24,6 @@ public class BlockGame {
         if(j > words[i].indexOf(" ")){
           pA2[((int)words[i].charAt(j) - 97)]++;
         }
-
-
       }
       for(int z = 0; z < alphabets.length; z++){
         alphabets[z] += Math.max(pA1[z] , pA2[z]);
@@ -38,20 +33,10 @@ public class BlockGame {
 
       i++;
     }
-
-
-
-
   for(int x = 0; x < alphabets.length; x++){
     pw.println(alphabets[x]);
 
   }
-
-
-
-
-
-
   pw.close();
   br.close();
 
