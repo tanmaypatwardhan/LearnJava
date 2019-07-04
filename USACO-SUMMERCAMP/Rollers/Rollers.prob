@@ -1,0 +1,51 @@
+Oh Those Rollers
+================
+
+Farmer John has installed a new winch that gives him mechanical
+advantage when lifting bales of hay into the barn. The winch was
+manufactured by the Rube Goldberg Winch Company and has way too
+many rollers to make any sense at all. The winch has a huge steel
+plate with a number of rollers whose ultimate source of power is
+the drive-roller whose location FJ has denoted as the origin (0,0).
+This roller drives a roller that drives another roller, etc. etc.
+until the final roller is driven. FJ is trying to find that final
+roller and wants to know which one it is.
+
+FJ has recorded the x_i,y_i (-5,000 <= x_i <= 5,000; -5,000 <= y_i
+<= 5,000) coordinates and the radius r_i (3 <= r_i <= 1024) of each
+of the N (2 <= N <= 1080) rollers. Tell him the x,y coordinate of
+the last roller in the chain (the roller that is driven but drives
+no other roller). Every roller except the drive-roller is driven
+by exactly one other roller.
+
+PROBLEM NAME: rollers
+
+INPUT FORMAT:
+
+* Line 1: A single integer: N
+
+* Lines 2..N+1: Line i+1 describes roller i with three space separated
+        integers: x_i, y_i, and r_i
+
+SAMPLE INPUT:
+
+3
+0 0 30
+30 40 20
+-15 100 55
+
+INPUT DETAILS:
+
+Three rollers. First is at the origin with radius 30. It drives the roller
+at (30,40) whose radius is 20. That roller in turn drives the third roller
+located at (-15,100) with radius 55.
+
+OUTPUT FORMAT:
+
+* Line 1: A single line with two space-separated integers that are
+        respectively the x,y coordinates of the last roller in the
+        chain of driven rollers.
+
+SAMPLE OUTPUT:
+
+-15 100

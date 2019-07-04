@@ -7,11 +7,11 @@ import java.io.*;
 import java.util.*;
 public class ride {
   public static void main(String[] args) throws IOException {
-  BufferedReader br = new BufferedReader(new FileReader("ride.in"));
-  PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("ride.out")));
+
+  Scanner s = new Scanner(System.in);
   int[] score_array={0,0};
   for(int i = 0; i < 2 ; i++) {
-      String word  = br.readLine();
+      String word  = s.nextLine();
       char[] character_array = word.toCharArray();
       int score=1;
       for(int j = 0; j < character_array.length; j++){
@@ -21,16 +21,12 @@ public class ride {
       }
 
       score_array[i] = score;
-    //  System.out.println(score_array[i] +" "+ score_array[i] % 47);
   }
 
   if (score_array[0] % 47 == score_array[1] % 47) {
-    pw.println("GO");
+    System.out.println("GO");
     } else {
-    pw.println("STAY");
+    System.out.println("STAY");
     }
-
-  pw.close();
-  br.close();
   }
 }
