@@ -10,12 +10,14 @@ public class ContaminatedMilk {
     int M = Integer.parseInt(st.nextToken());
     int D = Integer.parseInt(st.nextToken());
     int S = Integer.parseInt(st.nextToken());
-    ArrayList<Integer> people = new ArrayList<Integer>(D);
-    ArrayList<Integer> milk = new ArrayList<Integer>(D);
-    ArrayList<Integer> times = new ArrayList<Integer>(D);
-    ArrayList<Integer> sPeople = new ArrayList<Integer>(S);
-    ArrayList<Integer> sTimes = new ArrayList<Integer>(S);
-      Vector<Integer> sick = new Vector<Integer>();
+    Vector<Integer> people = new Vector<Integer>();
+    Vector<Integer> milk = new Vector<Integer>();
+    Vector<Integer> times = new Vector<Integer>();
+    Vector<Integer> sPeople = new Vector<Integer>();
+    Vector<Integer> sTimes = new Vector<Integer>();
+    Vector<Integer> sick = new Vector<Integer>();
+    int[] arr = new arr[M];
+
 
     // Filling in arrays
     for(int i = 0 ; i < D ; i++){
@@ -30,7 +32,6 @@ public class ContaminatedMilk {
       st = new StringTokenizer(br.readLine());
       sPeople.add(Integer.parseInt(st.nextToken()));
       sTimes.add(Integer.parseInt(st.nextToken()));
-
     }
 
     for(int i = 0 ; i < D ; i++){
@@ -39,7 +40,7 @@ public class ContaminatedMilk {
       }
     }
 
-    pw.println(sick);
+
 
 
 

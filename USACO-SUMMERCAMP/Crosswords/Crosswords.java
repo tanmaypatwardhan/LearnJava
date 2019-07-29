@@ -6,7 +6,7 @@ public class Crosswords {
     int rows = s.nextInt();
     int columns = s.nextInt();
     char[][] grid = new char[rows][columns];
-    Vector<Integer> x = new Vectort<Integer>();
+    Vector<Integer> x = new Vector<Integer>();
     Vector<Integer> y = new Vector<Integer>();
 
     for(int i = 0; i < rows ; i++){
