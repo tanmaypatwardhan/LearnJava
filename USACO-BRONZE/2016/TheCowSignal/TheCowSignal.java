@@ -7,21 +7,15 @@ public class TheCowSignal {
     int columns  = s.nextInt();
     int n = s.nextInt();
     char[][] grid = new char[rows][columns];
-    Vector<Integer> v = new Vector<Integer>();
+    Vector<Character> v = new Vector<Character>();
     for(int i = 0 ;  i < rows ; i++){
       String str = s.next();
       for(int j = 0 ; j < columns ; j++) grid[i][j] = str.charAt(j);
     }
 
     for(int i = 0 ; i < rows ; i++){
-      for(int j = 0 ; j < columsn ; j++){
-        if(grid[i][j] == 'X'){
-          v.add('X');
-          v.add('X');
-        } else {
-          v.add('.');
-          v.add('.');
-        }
+      for(int j = 0 ; j < columns ; j++){
+        for(int i = 0 ; i < n ; i++) System.out.println(grid[i][j]);
       }
     }
 
@@ -30,7 +24,7 @@ public class TheCowSignal {
 
 
 
-    pw.close();
+   
 
   }
 }

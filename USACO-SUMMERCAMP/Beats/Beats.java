@@ -17,7 +17,6 @@ public class Beats {
         for(int i = 0 ; i < q ; i++){
           queries[i] = s.nextInt();
         }
-
         for(int i =  0;  i < q ; i++){
           sortedQueries[i] = queries[i];
         }
