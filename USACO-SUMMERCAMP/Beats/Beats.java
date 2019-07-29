@@ -21,11 +21,6 @@ public class Beats {
           sortedQueries[i] = queries[i];
         }
         Arrays.sort(sortedQueries);
-
-
-
-
-
         System.out.println(v);
 
 
