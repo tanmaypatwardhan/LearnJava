@@ -8,8 +8,7 @@ public class Beats {
         int[] queries = new int[q];
         int[] sortedQueries = new int[q];
         Vector<Integer> v = new Vector<Integer>();
-        int beat = 1;
-        int sum = 0;
+        
 
         for(int i = 0; i < n ; i++){
           beats[i] = s.nextInt();
@@ -24,7 +23,7 @@ public class Beats {
         System.out.println(v);
 
 
-
+        s.close();
 
 
     }

@@ -15,11 +15,12 @@ public class TheCowSignal {
 
     for(int i = 0 ; i < rows ; i++){
       for(int j = 0 ; j < columns ; j++){
-        for(int i = 0 ; i < n ; i++) System.out.println(grid[i][j]);
+        for(int x = 0 ; x < n ; x++) System.out.print(grid[i][j]);
       }
+      System.out.println();
     }
 
-    System.out.println(v);
+    //System.out.println(v);
 
 
 
